@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol name="ycbcr_encoding_unstable_v1">
+
+  <copyright>
+    Copyright © 2017 Intel
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice (including the next
+    paragraph) shall be included in all copies or substantial portions of the
+    Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE SOFTWARE.
+  </copyright>
+
+  <interface name="zwp_ycbcr_encoding_v1" version="1">
+    <description summary="YCbCr encoding">
+    </description>
+
+    <enum name="encoding">
+      <entry name="undefined" value="0"
+             summary="Undefined"/>
+      <entry name="bt601" value="1"
+             summary="BT.601"/>
+      <entry name="bt709" value="2"
+             summary="BT.709"/>
+      <entry name="smpte240m" value="3"
+             summary="SMPTE 240M"/>
+      <entry name="bt2020" value="4"
+             summary="BT.2020"/>
+    </enum>
+
+    <enum name="quantization">
+      <entry name="limited" value="0"
+             summary="Limited range"/>
+      <entry name="full" value="1"
+             summary="Full range"/>
+    </enum>
+
+    <request name="destroy" type="destructor">
+      <description summary="delete this object, used or not">
+      </description>
+    </request>
+
+    <request name="set">
+      <description summary="set the YCbCr encoding parameters for a surface">
+      </description>
+      <arg name="surface" type="object" interface="wl_surface" summary="surface"/>
+      <arg name="encoding" type="uint" summary="YCbCr encoding matrix"/>
+      <arg name="quantization" type="uint" summary="YCbCr quantiozation range"/>
+    </request>
+  </interface>
+
+</protocol>

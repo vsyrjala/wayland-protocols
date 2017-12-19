@@ -17,6 +17,7 @@ unstable_protocols =								\
 	unstable/keyboard-shortcuts-inhibit/keyboard-shortcuts-inhibit-unstable-v1.xml \
 	unstable/xdg-output/xdg-output-unstable-v1.xml				\
 	unstable/colorspace/colorspace-unstable-v1.xml				\
+	unstable/ycbcr-encoding/ycbcr-encoding-unstable-v1.xml			\
 	$(NULL)
 
 stable_protocols =								\
