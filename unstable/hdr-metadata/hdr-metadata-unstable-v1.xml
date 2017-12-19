@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol name="hdr_metadata_unstable_v1">
+
+  <copyright>
+    Copyright © 2017 Intel
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the "Software"),
+    to deal in the Software without restriction, including without limitation
+    the rights to use, copy, modify, merge, publish, distribute, sublicense,
+    and/or sell copies of the Software, and to permit persons to whom the
+    Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice (including the next
+    paragraph) shall be included in all copies or substantial portions of the
+    Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE SOFTWARE.
+  </copyright>
+
+  <interface name="zwp_hdr_metadata_v1" version="1">
+    <description summary="HDR metadata">
+      Colorspace.
+    </description>
+
+    <request name="destroy" type="destructor">
+      <description summary="delete this object, used or not">
+      </description>
+    </request>
+
+    <request name="set">
+      <description summary="set the HDR metadata for a surface">
+      </description>
+      <arg name="surface" type="object" interface="wl_surface" summary="surface"/>
+      <arg name="display_primary_r_x" type="uint" summary="Red primary X"/>
+      <arg name="display_primary_r_y" type="uint" summary="Red primary Y"/>
+      <arg name="display_primary_g_x" type="uint" summary="Green primary X"/>
+      <arg name="display_primary_g_y" type="uint" summary="Green primary Y"/>
+      <arg name="display_primary_b_x" type="uint" summary="Blue primary X"/>
+      <arg name="display_primary_b_y" type="uint" summary="Blue primary Y"/>
+      <arg name="white_point_x" type="uint" summary="White point X"/>
+      <arg name="white_point_y" type="uint" summary="White point Y"/>
+      <arg name="min_luminance" type="uint" summary="Minimum luminance"/>
+      <arg name="max_luminance" type="uint" summary="Maximum luminance"/>
+      <arg name="max_cll" type="uint" summary="Maximum content light level"/>
+      <arg name="max_fall" type="uint" summary="Maximum frame-average light level"/>
+    </request>
+  </interface>
+
+</protocol>

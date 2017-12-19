@@ -18,6 +18,7 @@ unstable_protocols =								\
 	unstable/xdg-output/xdg-output-unstable-v1.xml				\
 	unstable/colorspace/colorspace-unstable-v1.xml				\
 	unstable/ycbcr-encoding/ycbcr-encoding-unstable-v1.xml			\
+	unstable/hdr-metadata/hdr-metadata-unstable-v1.xml			\
 	$(NULL)
 
 stable_protocols =								\
